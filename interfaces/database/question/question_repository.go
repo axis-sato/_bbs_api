@@ -1,4 +1,4 @@
-package database
+package question
 
 import "github.com/c8112002/bbs_api/domain"
 

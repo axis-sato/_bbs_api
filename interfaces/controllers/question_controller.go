@@ -1,7 +1,7 @@
 package controllers
 
 import (
-	"github.com/c8112002/bbs_api/infrastructures/database"
+	question2 "github.com/c8112002/bbs_api/interfaces/database/question"
 	"github.com/c8112002/bbs_api/usecases/question"
 	input2 "github.com/c8112002/bbs_api/usecases/question/input"
 	"github.com/labstack/echo/v4"
@@ -15,7 +15,7 @@ type QuestionController struct {
 func NewQuestionController() *QuestionController {
 	return &QuestionController{
 		QuestionUseCase: question.Interactor{
-			QuestionRepository: database.QuestionRepository{},
+			QuestionRepository: question2.QuestionRepository{},
 		},
 	}
 }
